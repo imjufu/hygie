@@ -60,4 +60,8 @@ group :development do
 
   # A RuboCop extension focused on enforcing Rails best practices and coding conventions.
   gem 'rubocop-rails', require: false
+
+  # rspec-rails brings the RSpec testing framework to Ruby on Rails as
+  # a drop-in alternative to its default testing framework, Minitest.
+  gem 'rspec-rails'
 end
