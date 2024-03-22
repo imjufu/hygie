@@ -6,9 +6,8 @@ services:
     ports:
       - 15432:5432
     environment:
-      - POSTGRES_PASSWORD=hygie
-      - POSTGRES_DB=hygie
       - POSTGRES_USER=hygie
+      - POSTGRES_PASSWORD=hygie
     volumes:
       - db-data:/var/lib/postgresql/data
 
