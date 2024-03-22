@@ -1,0 +1,2 @@
+module MacroCalculatorHelper
+end
