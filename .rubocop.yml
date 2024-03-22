@@ -9,7 +9,9 @@
 #
 # See https://docs.rubocop.org/rubocop/configuration
 
-require: rubocop-rails
+require:
+  - rubocop-rails
+  - rubocop-rspec
 
 AllCops:
   NewCops: enable
