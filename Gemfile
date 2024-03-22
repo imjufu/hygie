@@ -55,5 +55,8 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+
+  # A RuboCop extension focused on enforcing Rails best practices and coding conventions.
+  gem 'rubocop-rails', require: false
 end
 
