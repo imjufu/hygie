@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   get 'macro-calculator', to: 'macro_calculator#index'
+  post 'macro-calculator', to: 'macro_calculator#calculate'
 end
