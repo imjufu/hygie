@@ -4,8 +4,8 @@ class CalorieCalculator
   include ActiveModel::API
 
   GENDERS = {
-    'woman' => -161,
-    'man' => 5
+    'female' => -161,
+    'male' => 5
   }.freeze
 
   ACTIVITIES = {
