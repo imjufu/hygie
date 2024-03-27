@@ -1,0 +1,15 @@
+fr:
+  activemodel:
+    attributes:
+      calorie_calculator:
+        gender: Sexe
+        gender_male: Homme
+        gender_female: Femme
+        age: Âge
+        height: Taille
+        weight: Poids
+        activity: Activité
+        activity_sedentary: Sédentaire
+        activity_moderately_active: Moyennement actif
+        activity_active: Vigoureusement actif
+        activity_very_active: Extrêmement actif

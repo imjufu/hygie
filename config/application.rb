@@ -38,6 +38,17 @@ module Hygie
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
+    config.i18n.default_locale = :fr
+
+    # With a configured (default) time zone:
+    #   * ActiveRecord writes UTC to the database
+    #   * ActiveRecord converts time attributes back to the configured default
+    #     time zone
+    #   * ActiveRecord time attributes are ActiveSupport::TimeWithZone objects
+    #   * Time.current will be in the configured default time zone
+    #   * Time.now will be your local time (or the local time of your server)
+    config.time_zone = 'Paris'
+
     # Don't generate system test files.
     config.generators.system_tests = nil
   end

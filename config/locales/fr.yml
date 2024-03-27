@@ -1,0 +1,8 @@
+fr:
+  actions:
+    calculate: Calculer
+  activities:
+    sedentary_description_html: "Un employé de bureau qui fait peu ou pas d'exercice "
+    moderately_active_description_html: "- Personne ayant un emploi sédentaire qui fait du cardio / de l'haltérophilie 1 heure par jour ou ;<br>- Personne dont l'activité professionnelle consiste à marcher pendant les heures de travail sans faire d'exercice en dehors de son travail"
+    active_description_html: "- Personne ayant un emploi qui implique une activité modérée pendant environ 8 heures par jour ou ;<br>- Personne ayant un emploi sédentaire qui nage (ou similaire) 2 heures par jour ou ;<br>- Personne ayant un emploi sédentaire qui fait du cardio et de l'haltérophilie 2 heures par jour"
+    very_active_description_html: "- Cycliste de compétition (3-4 heures par jour, ou sport équivalent) ou ;<br>- Personne ayant un emploi qui implique une activité modérée pendant ~8 heures par jour et qui fait également du cardio pendant 1 heure par jour"
