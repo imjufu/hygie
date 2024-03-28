@@ -7,9 +7,9 @@ class MacroCalculator < CalorieCalculator
     return false unless valid?
 
     {
-      protein_in_grams: protein_in_grams,
-      lipid_in_grams: lipid_in_grams,
-      carbohydrate_in_grams: carbohydrate_in_grams,
+      protein_in_grams:,
+      lipid_in_grams:,
+      carbohydrate_in_grams:
     }
   end
 
