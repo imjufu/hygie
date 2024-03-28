@@ -1,6 +1,11 @@
 fr:
   actions:
     calculate: Calculer
+  errors:
+    messages:
+      saving_failed:
+        one: " Oops… Une erreur empêche de continuer."
+        other: " Oops… %{count} erreurs empêchent de continuer."
   activities:
     sedentary_description_html: "Un employé de bureau qui fait peu ou pas d'exercice "
     moderately_active_description_html: "- Personne ayant un emploi sédentaire qui fait du cardio / de l'haltérophilie 1 heure par jour ou ;<br>- Personne dont l'activité professionnelle consiste à marcher pendant les heures de travail sans faire d'exercice en dehors de son travail"

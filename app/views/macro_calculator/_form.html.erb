@@ -1,41 +1,31 @@
-<%= form_with model: calorie_calculator, url: macro_calculator_path, method: :post do |form| %>
-    <% if calorie_calculator.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(calorie_calculator.errors.count, "error") %> prohibited this calorie_calculator from being saved:</h2>
-
-      <ul>
-        <% calorie_calculator.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div>
+<%= render 'shared/errors', errors: macro_calculator.errors[:base] %>
+<%= form_with model: macro_calculator, url: macro_calculator_path, method: :post do |form| %>
+  <%= field_with_error(macro_calculator, :gender) do %>
     <%= form.label :gender %>
     <% CalorieCalculator::GENDERS.keys.each do |gender| %>
     <%= form.radio_button :gender, gender %>
     <%= form.label "gender_#{gender}" %>
     <% end %>
-  </div>
-  <div>
+  <% end %>
+  <%= field_with_error(macro_calculator, :age) do %>
     <%= form.label :age %>
     <%= form.text_field :age %>
-  </div>
-  <div>
+  <% end %>
+  <%= field_with_error(macro_calculator, :height) do %>
     <%= form.label :height %>
     <%= form.text_field :height %>
-  </div>
-  <div>
+  <% end %>
+  <%= field_with_error(macro_calculator, :weight) do %>
     <%= form.label :weight %>
     <%= form.text_field :weight %>
-  </div>
-  <div>
+  <% end %>
+  <%= field_with_error(macro_calculator, :activity) do %>
     <%= form.label :activity %>
     <% CalorieCalculator::ACTIVITIES.keys.each do |activity| %>
     <%= form.radio_button :activity, activity %>
     <%= form.label "activity_#{activity}" %>
     <%= t("activities.#{activity}_description_html") %>
     <% end %>
-  </div>
+  <% end %>
   <%= form.submit t("actions.calculate") %>
 <% end %>
