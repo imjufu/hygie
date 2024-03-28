@@ -2,21 +2,20 @@
 
 class MacroCalculatorController < ApplicationController
   def index
-    @calorie_calculator = CalorieCalculator.new
+    @macro_calculator = MacroCalculator.new
   end
 
   def calculate
-    @calorie_calculator = CalorieCalculator.new(macro_calculator_params)
+    @macro_calculator = MacroCalculator.new(macro_calculator_params)
+    @macro_details = @macro_calculator.calculate
 
-    @tdee = @calorie_calculator.tdee
-
-    render :index, status: :unprocessable_entity unless @tdee
+    render :index, status: :unprocessable_entity unless @macro_details
   end
 
   private
 
   # Only allow a list of trusted parameters through.
   def macro_calculator_params
-    params.require(:calorie_calculator).permit(:gender, :age, :height, :weight, :activity)
+    params.require(:macro_calculator).permit(:gender, :age, :height, :weight, :activity)
   end
 end

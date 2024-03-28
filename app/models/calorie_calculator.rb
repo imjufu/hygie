@@ -22,7 +22,7 @@ class CalorieCalculator
   validates :activity, inclusion: { in: ACTIVITIES.keys }
 
   def tdee
-    calculate_tdee
+    @tdee ||= calculate_tdee
   end
 
   private
