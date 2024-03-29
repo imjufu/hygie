@@ -2,7 +2,7 @@
 
 class MacroCalculatorController < ApplicationController
   def index
-    @macro_calculator = MacroCalculator.new
+    @macro_calculator = MacroCalculator.new(activity: MacroCalculator::ACTIVITIES.first.first)
   end
 
   def calculate

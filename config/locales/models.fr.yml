@@ -3,11 +3,9 @@ fr:
     attributes:
       calorie_calculator:
         gender: Sexe
-        gender_male: Homme
-        gender_female: Femme
         age: Âge
-        height: Taille
-        weight: Poids
+        height: Taille (en cm)
+        weight: Poids (en kg)
         activity: Activité
         activity_sedentary: Sédentaire
         activity_moderately_active: Moyennement actif
