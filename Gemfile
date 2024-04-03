@@ -53,6 +53,8 @@ group :development, :test do
 end
 
 group :development do
+  # Preview email in the default browser instead of sending it
+  gem 'letter_opener'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
