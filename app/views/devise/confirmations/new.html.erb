@@ -1,16 +1,22 @@
-<h2><%= t('.resend_confirmation_instructions') %></h2>
-
-<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit t('.resend_confirmation_instructions') %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+<div class="sm:w-2/6 sm:mx-auto">
+  <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+    <h2 class="title"><%= t('.resend_confirmation_instructions') %></h2>
+    <%= render 'shared/errors', errors: resource.errors[:base] %>
+    <div class="mt-10 grid grid-cols-1 gap-x-6 sm:gap-y-6 sm:grid-cols-6">
+      <div class="sm:col-span-6">
+        <%= field_with_error(resource, :email) do %>
+        <%= f.label :email %>
+        <div class="mt-2">
+          <%= f.email_field :email, class: 'block w-full', autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="mt-6 flex flex-col items-center gap-y-8">
+      <%= f.submit t('.resend_confirmation_instructions'), class: 'block w-full' %>
+      <div class="flex flex-col text-center">
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  <% end %>
+</div>
