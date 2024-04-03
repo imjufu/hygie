@@ -35,11 +35,11 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.1]
       ## Extra data
       t.string   :first_name, null: false
       t.string   :last_name, null: false
-      t.string   :gender, null: false
-      t.date :birthdate, null: false
-      t.integer   :height, null: false
-      t.integer   :weight, null: false
-      t.string :activity, null: false
+      t.string   :gender
+      t.date     :birthdate
+      t.integer  :height
+      t.integer  :weight
+      t.string   :activity
 
       t.timestamps null: false
     end

@@ -34,11 +34,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_03_123349) do
     t.datetime "locked_at"
     t.string "first_name", null: false
     t.string "last_name", null: false
-    t.string "gender", null: false
-    t.date "birthdate", null: false
-    t.integer "height", null: false
-    t.integer "weight", null: false
-    t.string "activity", null: false
+    t.string "gender"
+    t.date "birthdate"
+    t.integer "height"
+    t.integer "weight"
+    t.string "activity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
