@@ -1,4 +1,4 @@
-<div class="sm:w-3/12 sm:mx-auto">
+<div class="sm:w-2/6 sm:mx-auto">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <h2 class="title"><%= t('.sign_in') %></h2>
     <%= render 'shared/errors', errors: resource.errors[:base] %>
@@ -31,9 +31,7 @@
       <% end %>
     </div>
     <div class="mt-6 flex flex-col items-center gap-y-8">
-      <div>
-        <%= f.submit t('.sign_in') %>
-      </div>
+      <%= f.submit t('.sign_in'), class: 'block w-full' %>
       <div class="flex flex-col text-center">
         <%= render "devise/shared/links" %>
       </div>
