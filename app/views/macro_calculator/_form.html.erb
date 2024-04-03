@@ -1,5 +1,5 @@
 <%= render 'shared/errors', errors: macro_calculator.errors[:base] %>
-<%= form_with model: macro_calculator, url: macro_calculator_path, method: :post do |form| %>
+<%= form_with model: macro_calculator, url: macro_calculator_summary_path, method: :get do |form| %>
   <div class="border-b border-gray-900/10 pb-12">
     <h2 class="title"><%= t('macro_calculator.title') %></h2>
     <p class="subtitle"><%= t('macro_calculator.description') %></p>

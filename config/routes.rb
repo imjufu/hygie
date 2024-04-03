@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-  get 'macro-calculator', to: 'macro_calculator#index'
-  post 'macro-calculator', to: 'macro_calculator#calculate'
+  get 'macro_calculator', to: 'macro_calculator#index'
+  get 'macro_calculator/summary', to: 'macro_calculator#calculate'
 end
