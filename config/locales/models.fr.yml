@@ -11,3 +11,8 @@ fr:
         activity_moderately_active: Moyennement actif
         activity_active: Vigoureusement actif
         activity_very_active: Extrêmement actif
+  activerecord:
+    attributes:
+      user:
+        first_name: Prénom
+        last_name: Nom

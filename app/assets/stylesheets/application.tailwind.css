@@ -4,6 +4,7 @@
 
 @layer components {
   .hygie {
+    @apply max-w-full p-8;
     form {
       label {
         @apply text-sm font-medium leading-6 text-gray-900;
@@ -11,7 +12,7 @@
       select {
         @apply rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6;
       }
-      input[type=number] {
+      input {
         @apply rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6;
       }
       input[type=submit] {
@@ -20,14 +21,13 @@
       input[type=radio] {
         @apply h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600;
       }
-      .invalid input[type=number] {
+      .invalid input {
         @apply ring-red-600;
       }
       p.error {
         @apply mt-1 text-sm text-red-600;
       }
     }
-
     .title {
       @apply font-semibold leading-7 text-gray-900;
     }
