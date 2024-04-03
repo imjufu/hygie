@@ -1,2 +1,18 @@
-<%= @macro_calculator.to_json %>
-<%= @macro_details %>
+<h2 class="title"><%= t('macro_calculator.title') %></h2>
+<p class="subtitle"><%= t('macro_calculator.description') %></p>
+<h3 class="title mt-2"><%= t('macro_calculator.summary') %></h3>
+<p class="subtitle"><%= t("gender.#{@macro_calculator.gender}") %>, <%= t("age", count: @macro_calculator.age) %>, <%= t("height", count: @macro_calculator.height) %>, <%= t("weight", count: @macro_calculator.weight) %>, <%= t("activemodel.attributes.calorie_calculator.activity_#{@macro_calculator.activity}") %></p>
+<dl class="mt-7 grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+  <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+    <dt class="text-base leading-3 text-gray-600"><%= t('macro_calculator.carbohydrate') %></dt>
+    <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900"><%= @macro_details[:carbohydrate_in_grams] %>g</dd>
+  </div>
+  <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+    <dt class="text-base leading-3 text-gray-600"><%= t('macro_calculator.protein') %></dt>
+    <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900"><%= @macro_details[:protein_in_grams] %>g</dd>
+  </div>
+  <div class="mx-auto flex max-w-xs flex-col gap-y-4">
+    <dt class="text-base leading-3 text-gray-600"><%= t('macro_calculator.lipid') %></dt>
+    <dd class="order-first text-3xl font-semibold tracking-tight text-gray-900"><%= @macro_details[:lipid_in_grams] %>g</dd>
+  </div>
+</dl>

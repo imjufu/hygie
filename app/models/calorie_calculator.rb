@@ -25,6 +25,10 @@ class CalorieCalculator
     @tdee ||= calculate_tdee
   end
 
+  def bmr
+    @bmr ||= calculate_bmr
+  end
+
   private
 
   def calculate_bmr
@@ -36,7 +40,6 @@ class CalorieCalculator
 
   def calculate_tdee
     # TDEE = Total Daily Energy Expenditure
-    bmr = calculate_bmr
     return false unless bmr
 
     bmr * ACTIVITIES.fetch(activity.to_sym)

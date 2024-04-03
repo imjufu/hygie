@@ -16,15 +16,15 @@ class MacroCalculator < CalorieCalculator
   private
 
   def protein_in_grams
-    @protein_in_grams ||= 1.5 * weight.to_i
+    @protein_in_grams ||= (1.5 * weight.to_i).round
   end
 
   def lipid_in_grams
-    @lipid_in_grams ||= lipid_in_calories / 9
+    @lipid_in_grams ||= (lipid_in_calories / 9).round
   end
 
   def carbohydrate_in_grams
-    @carbohydrate_in_grams ||= carbohydrate_in_calories / 4
+    @carbohydrate_in_grams ||= (carbohydrate_in_calories / 4).round
   end
 
   def protein_in_calories

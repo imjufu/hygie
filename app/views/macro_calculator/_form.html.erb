@@ -1,61 +1,59 @@
 <%= render 'shared/errors', errors: macro_calculator.errors[:base] %>
-<%= form_with model: macro_calculator, url: macro_calculator_path, method: :post, class: 'hygie' do |form| %>
-  <div class="space-y-12">
-    <div class="border-b border-gray-900/10 pb-12">
-      <h2 class="text-base font-semibold leading-7 text-gray-900"><%= t('macro_calculator.title') %></h2>
-      <p class="mt-1 text-sm leading-6 text-gray-600"><%= t('macro_calculator.description') %></p>
+<%= form_with model: macro_calculator, url: macro_calculator_path, method: :post do |form| %>
+  <div class="border-b border-gray-900/10 pb-12">
+    <h2 class="title"><%= t('macro_calculator.title') %></h2>
+    <p class="subtitle"><%= t('macro_calculator.description') %></p>
 
-      <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-        <div class="sm:col-span-1">
-          <%= field_with_error(macro_calculator, :gender) do %>
-          <%= form.label :gender %>
-          <div class="mt-2">
-            <%= form.select(:gender, CalorieCalculator::GENDERS.map { |gender, _v| [t("gender.#{gender}"), gender] }, {}, class: 'block w-full') %>
-          </div>
-          <% end %>
+    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+      <div class="sm:col-span-1">
+        <%= field_with_error(macro_calculator, :gender) do %>
+        <%= form.label :gender %>
+        <div class="mt-2">
+          <%= form.select(:gender, CalorieCalculator::GENDERS.map { |gender, _v| [t("gender.#{gender}"), gender] }, {}, class: 'block w-full') %>
         </div>
-        <div class="sm:col-span-1">
-          <%= field_with_error(macro_calculator, :age) do %>
-          <%= form.label :age %>
-          <div class="mt-2">
-            <%= form.number_field :age, class: 'block w-full' %>
-          </div>
-          <% end %>
+        <% end %>
+      </div>
+      <div class="sm:col-span-1">
+        <%= field_with_error(macro_calculator, :age) do %>
+        <%= form.label :age %>
+        <div class="mt-2">
+          <%= form.number_field :age, class: 'block w-full' %>
         </div>
-        <div class="sm:col-span-1">
-          <%= field_with_error(macro_calculator, :height) do %>
-          <%= form.label :height %>
-          <div class="mt-2">
-            <%= form.number_field :height, class: 'block w-full' %>
-          </div>
-          <% end %>
+        <% end %>
+      </div>
+      <div class="sm:col-span-1">
+        <%= field_with_error(macro_calculator, :height) do %>
+        <%= form.label :height %>
+        <div class="mt-2">
+          <%= form.number_field :height, class: 'block w-full' %>
         </div>
-        <div class="sm:col-span-1">
-          <%= field_with_error(macro_calculator, :weight) do %>
-          <%= form.label :weight %>
-          <div class="mt-2">
-            <%= form.number_field :weight, class: 'block w-full' %>
-          </div>
-          <% end %>
+        <% end %>
+      </div>
+      <div class="sm:col-span-1">
+        <%= field_with_error(macro_calculator, :weight) do %>
+        <%= form.label :weight %>
+        <div class="mt-2">
+          <%= form.number_field :weight, class: 'block w-full' %>
         </div>
-        <div class="sm:col-span-6">
-          <%= field_with_error(macro_calculator, :activity) do %>
-          <%= form.label :activity %>
-          <div class="mt-2">
-            <% CalorieCalculator::ACTIVITIES.keys.each do |activity| %>
-            <div class="relative flex gap-x-3">
-              <div class="flex h-6 items-center">
-                <%= form.radio_button :activity, activity %>
-              </div>
-              <div class="text-sm leading-6">
-                <%= form.label "activity_#{activity}" %>
-                <p class="text-gray-500"><%= t("macro_calculator.activities.#{activity}_description_html") %></p>
-              </div>
+        <% end %>
+      </div>
+      <div class="sm:col-span-6">
+        <%= field_with_error(macro_calculator, :activity) do %>
+        <%= form.label :activity %>
+        <div class="mt-2">
+          <% CalorieCalculator::ACTIVITIES.keys.each do |activity| %>
+          <div class="relative flex gap-x-3">
+            <div class="flex h-6 items-center">
+              <%= form.radio_button :activity, activity %>
             </div>
-            <% end %>
+            <div class="text-sm leading-6">
+              <%= form.label "activity_#{activity}" %>
+              <p class="text-gray-500"><%= t("macro_calculator.activities.#{activity}_description_html") %></p>
+            </div>
           </div>
           <% end %>
         </div>
+        <% end %>
       </div>
     </div>
   </div>
