@@ -5,6 +5,7 @@
 @layer components {
   .hygie {
     @apply max-w-full p-8;
+
     form {
       label {
         @apply text-sm font-medium leading-6 text-gray-900;
@@ -31,10 +32,12 @@
         @apply mt-1 text-sm text-red-600;
       }
     }
+
     .title {
       @apply font-semibold leading-7 text-gray-900;
     }
-    p.subtitle {
+
+    .subtitle {
       @apply mt-1 text-sm leading-6 text-gray-600;
     }
   }
