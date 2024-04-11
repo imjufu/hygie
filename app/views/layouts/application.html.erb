@@ -12,7 +12,9 @@
   </head>
 
   <body>
-    <main class="container mx-auto hygie">
+    <%= render "shared/navbar" %>
+    <main class="container hygie">
+      <%= render 'shared/messages' %>
       <%= yield %>
     </main>
   </body>

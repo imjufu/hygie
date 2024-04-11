@@ -34,6 +34,11 @@ gem 'bootsnap', require: false
 gem 'rails-i18n', '~> 7.0.0'
 # Tailwind CSS for Rails
 gem 'tailwindcss-rails', '~> 2.3'
+# Font Awesome is the Internet's icon library and toolkit
+gem 'font-awesome-sass', '~> 6.5'
+# Devise is a flexible authentication solution for Rails based on Warden
+gem 'devise'
+gem 'devise-i18n'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -50,6 +55,8 @@ group :development, :test do
 end
 
 group :development do
+  # Preview email in the default browser instead of sending it
+  gem 'letter_opener'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
