@@ -34,6 +34,8 @@ gem 'bootsnap', require: false
 gem 'rails-i18n', '~> 7.0.0'
 # Tailwind CSS for Rails
 gem 'tailwindcss-rails', '~> 2.3'
+# Font Awesome is the Internet's icon library and toolkit
+gem 'font-awesome-sass', '~> 6.5'
 # Devise is a flexible authentication solution for Rails based on Warden
 gem 'devise'
 gem 'devise-i18n'

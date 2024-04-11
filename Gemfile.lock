@@ -114,6 +114,9 @@ GEM
       railties (>= 5.0.0)
     faker (3.3.1)
       i18n (>= 1.8.11, < 2)
+    ffi (1.16.3)
+    font-awesome-sass (6.5.2)
+      sassc (~> 2.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
     google-protobuf (4.26.0)
@@ -310,6 +313,8 @@ GEM
       google-protobuf (>= 3.25, < 5.0)
     sass-embedded (1.72.0-x86_64-linux-musl)
       google-protobuf (>= 3.25, < 5.0)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -373,6 +378,7 @@ DEPENDENCIES
   devise-i18n
   factory_bot_rails
   faker
+  font-awesome-sass (~> 6.5)
   importmap-rails
   jbuilder
   letter_opener
