@@ -1,11 +1,7 @@
 <div class="sm:w-2/6 sm:mx-auto">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <h2 class="title"><%= t('.sign_in') %></h2>
-    <div class="mt-10 grid grid-cols-1 gap-x-6 sm:gap-y-6 sm:grid-cols-6">
-      <div class="sm:col-span-6">
-        <%= render 'shared/errors', errors: resource.errors %>
-        <%= render 'shared/messages' %>
-      </div>
+    <div class="grid grid-cols-1 gap-x-6 sm:gap-y-6 sm:grid-cols-6">
       <div class="sm:col-span-6">
         <%= field_with_error(resource, :email) do %>
           <%= f.label :email %>

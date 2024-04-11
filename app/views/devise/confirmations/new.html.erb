@@ -1,8 +1,7 @@
 <div class="sm:w-2/6 sm:mx-auto">
   <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
     <h2 class="title"><%= t('.resend_confirmation_instructions') %></h2>
-    <%= render 'shared/errors', errors: resource.errors[:base] %>
-    <div class="mt-10 grid grid-cols-1 gap-x-6 sm:gap-y-6 sm:grid-cols-6">
+    <div class="grid grid-cols-1 gap-x-6 sm:gap-y-6 sm:grid-cols-6">
       <div class="sm:col-span-6">
         <%= field_with_error(resource, :email) do %>
         <%= f.label :email %>
