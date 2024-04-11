@@ -1,6 +1,12 @@
 fr:
+  title: "Hygie"
   actions:
     calculate: "Calculer"
+    menu:
+      open: "Ouvrir le menu"
+      close: "Fermer le menu"
+    sign_out: "Se déconnecter"
+  hello: "Bonjour %{name}"
   gender:
     male: "Homme"
     female: "Femme"
@@ -11,11 +17,6 @@ fr:
     other: "%{count}kg"
   height:
     other: "%{count}cm"
-  errors:
-    messages:
-      saving_failed:
-        one: "Oops… Une erreur empêche de continuer."
-        other: "Oops… %{count} erreurs empêchent de continuer."
   macro_calculator:
     title: "Calculateur de macronutriments"
     description: "Un régime IIFYM (If it fits your macros – Tant que ça rentre dans vos macros) est une approche nutritionnelle conçue pour te donner la possibilité de choisir ce que tu souhaites manger afin d'éviter d'aller en dessous ou au‐dessus de ton apport calorique journalier."

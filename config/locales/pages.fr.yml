@@ -1,0 +1,15 @@
+fr:
+  shared:
+    navbar:
+      features: "Fonctionnalités"
+      about_us: "Qui sommes-nous ?"
+  welcome:
+    index:
+      title: "Prends le contrôle de ton bien-être."
+      subtitle: "Fixes tes objectifs, suis facilement tes apports alimentaire quotidien et visualises efficacement tes progrès."
+      lets_go: "C'est parti !"
+      learn_more: "En savoir plus"
+  macro_calculator:
+    title: "Calculateur de macronutriments"
+    description: "Un régime IIFYM (If it fits your macros – Tant que ça rentre dans vos macros) est une approche nutritionnelle conçue pour te donner la possibilité de choisir ce que tu souhaites manger afin d'éviter d'aller en dessous ou au‐dessus de ton apport calorique journalier."
+    summary: "Tes apports quotidien"
