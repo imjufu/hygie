@@ -7,9 +7,6 @@
     @apply isolate relative max-w-full mt-20 pb-8 px-8;
 
     form {
-      .title {
-        @apply mb-6;
-      }
       label {
         @apply text-sm font-medium leading-6 text-gray-900;
       }
