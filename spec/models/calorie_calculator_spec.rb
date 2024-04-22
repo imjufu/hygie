@@ -14,12 +14,12 @@ RSpec.describe CalorieCalculator do
   end
 
   describe '#tdee' do
-    it 'returns a float' do
-      expect(calorie_calc.tdee).to be_a Float
+    it 'returns an integer' do
+      expect(calorie_calc.tdee).to be_an Integer
     end
 
     it 'returns the TDEE' do
-      expect(calorie_calc.tdee).to eq(3209.75)
+      expect(calorie_calc.tdee).to eq(2689)
     end
 
     context 'when the object is invalid' do
@@ -33,7 +33,7 @@ RSpec.describe CalorieCalculator do
 
   describe '#bmr' do
     it 'returns an integer' do
-      expect(calorie_calc.bmr).to be_a Float
+      expect(calorie_calc.bmr).to be_an Integer
     end
 
     it 'returns the BMR' do

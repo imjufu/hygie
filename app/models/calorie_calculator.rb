@@ -13,7 +13,7 @@ class CalorieCalculator
     lightly_active: 1.375,
     moderately_active: 1.55,
     active: 1.725,
-    very_active: 1.9,
+    very_active: 1.9
   }.freeze
 
   attr_accessor :gender, :age, :height, :weight, :activity
@@ -23,11 +23,17 @@ class CalorieCalculator
   validates :activity, inclusion: { in: ACTIVITIES.keys.map(&:to_s) }
 
   def tdee
-    @tdee ||= calculate_tdee.to_i
+    return @tdee if @tdee
+
+    tdee = calculate_tdee
+    @tdee = tdee ? tdee.to_i : tdee
   end
 
   def bmr
-    @bmr ||= calculate_bmr.to_i
+    return @bmr if @bmr
+
+    bmr = calculate_bmr
+    @bmr = bmr ? bmr.to_i : bmr
   end
 
   private

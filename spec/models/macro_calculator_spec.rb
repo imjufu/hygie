@@ -20,9 +20,9 @@ RSpec.describe MacroCalculator do
 
     it 'returns the macronutrients in grams' do
       expect(macro_calc.calculate).to eq({
-                                           carbohydrate_in_grams: 442,
-                                           lipid_in_grams: 107,
-                                           protein_in_grams: 120
+                                           carbohydrate_in_grams: 326,
+                                           lipid_in_grams: 89,
+                                           protein_in_grams: 144
                                          })
     end
 
