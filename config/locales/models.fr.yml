@@ -8,9 +8,10 @@ fr:
         weight: Poids (en kg)
         activity: Activité
         activity_sedentary: Sédentaire
-        activity_moderately_active: Moyennement actif
-        activity_active: Vigoureusement actif
-        activity_very_active: Extrêmement actif
+        activity_lightly_active: Légèrement actif
+        activity_moderately_active: Modérément actif
+        activity_active: Actif
+        activity_very_active: Très actif
   activerecord:
     attributes:
       user:

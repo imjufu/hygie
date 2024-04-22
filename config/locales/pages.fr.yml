@@ -11,5 +11,13 @@ fr:
       learn_more: "En savoir plus"
   macro_calculator:
     title: "Calculateur de macronutriments"
-    description: "Un régime IIFYM (If it fits your macros – Tant que ça rentre dans vos macros) est une approche nutritionnelle conçue pour te donner la possibilité de choisir ce que tu souhaites manger afin d'éviter d'aller en dessous ou au‐dessus de ton apport calorique journalier."
+    description: "Un régime IIFYM (If it fits your macros – Tant que ça rentre dans vos macros) est une approche nutritionnelle conçue pour te donner la possibilité de choisir ce que tu souhaites manger afin d'éviter d'aller en dessous ou au‐dessus de ton apport calorique journalier. Ce calculateur estime le nombre de calories que ton corps brûle quotidiennement en fonction de ton taux métabolique de base et d'un multiplicateur d'activité qui reflète la quantité d'exercice que tu fais au cours d'une semaine donnée et l'effet thermique des aliments. Il utilise l'équation de Mifflin-St Jeor pour effectuer ces calculs, car il s’agit de la méthode la plus précise à ce jour."
     summary: "Tes apports quotidien"
+    calculate:
+      your_maintenance_calories: "Tes besoins journaliers en calories :"
+      bmr:
+        title: "Ton taux métabolique basal :"
+        description: "C'est ce qu'on appelle le \"BMR\" pour \"Basal Metabolic Rate\". Il s'agit de la quantité d'énergie (calories) que ton corps brûle si tu ne fais rien d'autre que de te reposer pendant 24 heures."
+      tdee:
+        title: "Ta dépense énergétique quotidienne totale :"
+        description: "C'est ce qu'on appelle le \"TDEE\" pour \"Total Daily Energy Expenditure\". Il s'agit de la quantité de calories dont tu as besoin quotidiennement, y compris l'activité physique. Cela va du brossage des dents à la course à pied."
