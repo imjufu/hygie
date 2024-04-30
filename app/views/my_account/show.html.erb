@@ -1,0 +1,53 @@
+<div>
+  <div class="px-4 sm:px-0">
+    <h3 class="text-base font-semibold leading-7 text-gray-900"><%= t('.title') %></h3>
+    <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500"><%= t('.subtitle') %></p>
+  </div>
+  <div class="mt-6 border-t border-gray-100">
+    <dl class="divide-y divide-gray-100">
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm font-medium leading-6 text-gray-900"><%= t('activerecord.attributes.user.full_name') %></dt>
+        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"><%= @user.full_name %></dd>
+      </div>
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm font-medium leading-6 text-gray-900"><%= t('activerecord.attributes.user.email') %></dt>
+        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"><%= @user.email %></dd>
+      </div>
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm font-medium leading-6 text-gray-900"><%= t('activerecord.attributes.user.birthdate') %></dt>
+        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"><%= l @user.birthdate %> <span class="text-gray-400">(<%= t('age', count: @user.age) %>)</span></dd>
+      </div>
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm font-medium leading-6 text-gray-900"><%= t('activerecord.attributes.user.height') %></dt>
+        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"><%= t('height', count: @user.height) %></dd>
+      </div>
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm font-medium leading-6 text-gray-900"><%= t('activerecord.attributes.user.weight') %></dt>
+        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"><%= t('weight', count: @user.weight) %></dd>
+      </div>
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm font-medium leading-6 text-gray-900"><%= t('activerecord.attributes.user.activity') %></dt>
+        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0"><%= t("activemodel.attributes.calorie_calculator.activity_#{@user.activity}") %> <span class="text-gray-400">(<%= t("macro_calculator.activities.#{@user.activity}_description_html") %>)</span></dd>
+      </div>
+      <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+        <dt class="text-sm font-medium leading-6 text-gray-900"><%= t('.macronutrients') %></dt>
+        <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+          <dl>
+            <div class="sm:grid sm:grid-cols-3">
+              <dt><%= t('macro_calculator.carbohydrate') %></dt>
+              <dd><%= @user.macro_calc.calculate[:carbohydrate_in_grams] %>g</dd>
+            </div>
+            <div class="sm:grid sm:grid-cols-3">
+              <dt><%= t('macro_calculator.protein') %></dt>
+              <dd><%= @user.macro_calc.calculate[:protein_in_grams] %>g</dd>
+            </div>
+            <div class="sm:grid sm:grid-cols-3">
+              <dt><%= t('macro_calculator.lipid') %></dt>
+              <dd><%= @user.macro_calc.calculate[:lipid_in_grams] %>g</dd>
+            </div>
+          </dl>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
