@@ -16,6 +16,6 @@ class MacroCalculatorController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def macro_calculator_params
-    params.require(:macro_calculator).permit(:gender, :age, :height, :weight, :activity)
+    params.require(:macro_calculator).permit(:gender, :birthdate, :height, :weight, :activity)
   end
 end

@@ -6,7 +6,7 @@ RSpec.describe MacroCalculator do
   subject(:macro_calc) do
     described_class.new({
                           gender: 'male',
-                          age: 39,
+                          birthdate: 39.years.ago,
                           height: 180,
                           weight: 80,
                           activity: 'moderately_active'

@@ -3,7 +3,7 @@ fr:
     attributes:
       calorie_calculator:
         gender: Sexe
-        age: Âge
+        birthdate: Date de naissance
         height: Taille (en cm)
         weight: Poids (en kg)
         activity: Activité
@@ -15,5 +15,11 @@ fr:
   activerecord:
     attributes:
       user:
+        full_name: Nom complet
         first_name: Prénom
         last_name: Nom
+        height: Taille (en cm)
+        weight: Poids (en kg)
+        activity: Activité
+        gender: Sexe
+        birthdate: Date de naissance
