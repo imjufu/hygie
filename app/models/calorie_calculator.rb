@@ -16,10 +16,11 @@ class CalorieCalculator
     very_active: 1.9
   }.freeze
 
-  attr_accessor :gender, :age, :height, :weight, :activity
+  attr_accessor :gender, :birthdate, :height, :weight, :activity
 
+  validates :birthdate, presence: true
   validates :gender, inclusion: { in: GENDERS.keys.map(&:to_s) }
-  validates :age, :height, :weight, numericality: { greater_than: 0, only_integer: true }
+  validates :height, :weight, numericality: { greater_than: 0, only_integer: true }
   validates :activity, inclusion: { in: ACTIVITIES.keys.map(&:to_s) }
 
   def tdee
@@ -34,6 +35,10 @@ class CalorieCalculator
 
     bmr = calculate_bmr
     @bmr = bmr ? bmr.to_i : bmr
+  end
+
+  def age
+    AgeCalculator.new(birthdate).calculate
   end
 
   private

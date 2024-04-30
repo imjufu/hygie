@@ -14,10 +14,10 @@
         <% end %>
       </div>
       <div class="sm:col-span-1">
-        <%= field_with_error(macro_calculator, :age) do %>
-        <%= form.label :age %>
+        <%= field_with_error(macro_calculator, :birthdate) do %>
+        <%= form.label :birthdate %>
         <div class="mt-2">
-          <%= form.number_field :age, class: 'block w-full' %>
+          <%= form.date_field :birthdate, class: 'block w-full' %>
         </div>
         <% end %>
       </div>
